@@ -1,43 +1,100 @@
 function Contacts() {
     return (
-        <section className="mx-8 py-8">
-            <div className="flex flex-row max-w-7xl h-96 mx-auto px-6 py-6 justify-between items-start rounded-4xl bg-[#70A73C]">
+        <section className="mx-4 md:mx-8 py-8">
+            <div className="max-w-7xl mx-auto bg-[#70A73C] rounded-3xl px-6 py-8 md:px-10 md:py-10">
 
-                {/* Headline - rata atas, kiri */}
-                <h2 className="pl-12 pt-10 max-w-md font-medium text-5xl text-white font-helvetica leading-tight">
-                    Where you can find me?
-                </h2>
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-6 items-center">
 
-                {/* Panel Kontak - putih, mengisi tinggi penuh */}
-                <div className="w-[40%] h-full bg-white rounded-2xl flex flex-col justify-center gap-12 px-10">
+                    {/* Left */}
+                    <div className="w-full lg:w-1/2">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-tight">
+                            Where you can find me?
+                        </h2>
 
-                    <a href="mailto:pramudya@email.com" className="flex items-center gap-4 group">
-                        <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition-colors">
-                            <span className="text-green-700 group-hover:text-white transition-colors">✉</span>
-                        </div>
-                        <p className="text-gray-800 font-medium">pranata.dyo@gmail.com</p>
-                    </a>
+                        <p className="mt-4 text-base sm:text-lg italic text-white">
+                            You can find me on the platforms below:
+                        </p>
+                    </div>
 
-                    <a href="https://linkedin.com/in/pramudya" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                        <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition-colors">
-                            <span className="text-green-700 group-hover:text-white transition-colors">in</span>
-                        </div>
-                        <p className="text-gray-800 font-medium">linkedin.com/in/pranataekapramudya</p>
-                    </a>
+                    {/* Right */}
+                    <div className="w-full lg:w-[40%] bg-white rounded-2xl p-6 sm:p-8 flex flex-col gap-6">
 
-                    <a href="https://github.com/pramudya" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                        <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition-colors">
-                            <span className="text-green-700 group-hover:text-white transition-colors">gh</span>
-                        </div>
-                        <p className="text-gray-800 font-medium">github.com/pramudyaeka</p>
-                    </a>
+                        <a
+                            href="mailto:pranata.dyo@gmail.com"
+                            className="flex items-center gap-4 group"
+                        >
+                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition">
+                                <span className="text-green-700 group-hover:text-white">
+                                    ✉
+                                </span>
+                            </div>
+
+                            <p className="text-sm sm:text-base break-all text-gray-800 font-medium">
+                                pranata.dyo@gmail.com
+                            </p>
+                        </a>
+
+                        <a
+                            href="https://linkedin.com/in/pranataekapramudya"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-4 group"
+                        >
+                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition">
+                                <span className="text-green-700 group-hover:text-white">
+                                    in
+                                </span>
+                            </div>
+
+                            <p className="text-sm sm:text-base break-all text-gray-800 font-medium">
+                                linkedin.com/in/pranataekapramudya
+                            </p>
+                        </a>
+
+                        <a
+                            href="https://github.com/pramudyaeka"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-4 group"
+                        >
+                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition">
+                                <span className="text-green-700 group-hover:text-white">
+                                    gh
+                                </span>
+                            </div>
+
+                            <p className="text-sm sm:text-base break-all text-gray-800 font-medium">
+                                github.com/pramudyaeka
+                            </p>
+                        </a>
+
+                        <a
+                            href="https://instagram.com/pramudyaeka_"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-4 group"
+                        >
+                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition">
+                                <span className="text-green-700 group-hover:text-white">
+                                    ig
+                                </span>
+                            </div>
+
+                            <p className="text-sm sm:text-base break-all text-gray-800 font-medium">
+                                instagram.com/pramudyaeka_
+                            </p>
+                        </a>
+
+                    </div>
 
                 </div>
             </div>
 
-            {/* Footer copyright */}
-            <p className="text-center text-sm text-gray-500 mt-8">2026 - Pramudya</p>
+            <p className="text-center text-sm text-gray-500 mt-8">
+                © 2026 - Pramudya
+            </p>
         </section>
-    )
+    );
 }
-export default Contacts
+
+export default Contacts;
