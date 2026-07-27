@@ -3,6 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import Hero from './section/Hero'
+import AboutMe from './section/AboutMe'
+import SelectedWorks from './section/SelectedWorks'
+import Contacts from './section/Contacts'
 import './App.css'
 
 function App() {
@@ -11,6 +14,9 @@ function App() {
   return (
     <>
       <Hero />
+      <AboutMe />
+      <SelectedWorks />
+      <Contacts />
     </>
   )
 }

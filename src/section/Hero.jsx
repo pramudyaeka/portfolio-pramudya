@@ -6,13 +6,13 @@ function Hero() {
         <div
             className="flex flex-col items-center min-h-screen"
             style={{
-                backgroundImage: `url(${bgHero})`,
+                backgroundImage: `linear-gradient(to bottom, transparent 60%, white 100%), url(${bgHero})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
         >
             {/* Container utama - membatasi lebar maksimal & menjaga margin kiri-kanan konsisten */}
-            <div className="w-full max-w-[1280px] mx-auto flex flex-col items-center px-8">
+            <div className="w-full max-w-7xl mx-auto flex flex-col items-center px-8">
 
                 {/* Navigation menu */}
                 <div className="flex flex-row m-8 w-96 h-12 bg-gray-950 rounded-full items-center justify-between px-8 font-medium text-white shadow-lg">
@@ -42,7 +42,7 @@ function Hero() {
                     <img
                         src={fotoPramudya}
                         alt="Foto Pramudya"
-                        className="h-96 object-contain pl-6"
+                        className="h-96 object-contain pl-8"
                         style={{
                             maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
                             WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
