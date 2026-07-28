@@ -122,14 +122,14 @@ function Hero() {
                             or building websites, I'm always up for creating
                             something people genuinely enjoy using.
                         </p>
-                        <button href="#contact" className="group flex items-center gap-3 rounded-full bg-[#70A73C] px-6 py-3 text-white shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 text-sm">
+                        <a href="#contact" className="group flex items-center gap-3 rounded-full bg-[#70A73C] px-6 py-3 text-white shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 text-sm">
                             Let's Build Something
                             <ArrowRight
                                 size={16}
                                 className="group-hover:translate-x-1 transition"
                             />
                             
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
