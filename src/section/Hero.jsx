@@ -96,7 +96,7 @@ function Hero() {
                             🎨 UI/UX
                         </div>
                         <div className="hidden xl:flex absolute right-0 bottom-12 bg-white rounded-full shadow-lg px-4 py-2 rotate-[8deg] text-sm">
-                            💻 React
+                            💻 Web
                         </div>
                         <div className="hidden xl:flex absolute left-8 bottom-2 bg-white rounded-full shadow-lg px-4 py-2 rotate-2 text-sm">
                             ☕ Coffee Powered
