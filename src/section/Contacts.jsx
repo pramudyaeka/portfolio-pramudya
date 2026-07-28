@@ -1,98 +1,129 @@
-function Contacts() {
-    return (
-        <section className="mx-4 md:mx-8 py-8">
-            <div className="max-w-7xl mx-auto bg-[#70A73C] rounded-3xl px-6 py-8 md:px-10 md:py-10">
+import { Mail } from "lucide-react";
+import {
+    FaLinkedin,
+    FaGithub,
+    FaInstagram,
+    FaArrowUpRightFromSquare,
+} from "react-icons/fa6";
 
-                <div className="flex flex-col lg:flex-row gap-10 lg:gap-6 items-center">
+function Contacts() {
+    const contacts = [
+        {
+            title: "Email",
+            value: "pranata.dyo@gmail.com",
+            href: "mailto:pranata.dyo@gmail.com",
+            icon: <Mail size={20} />,
+        },
+        {
+            title: "LinkedIn",
+            value: "linkedin.com/in/pranataekapramudya",
+            href: "https://linkedin.com/in/pranataekapramudya",
+            icon: <FaLinkedin size={20} />,
+        },
+        {
+            title: "GitHub",
+            value: "github.com/pramudyaeka",
+            href: "https://github.com/pramudyaeka",
+            icon: <FaGithub size={20} />,
+        },
+        {
+            title: "Instagram",
+            value: "instagram.com/pramudyaeka_",
+            href: "https://instagram.com/pramudyaeka_",
+            icon: <FaInstagram size={20} />,
+        },
+    ];
+
+    return (
+        <section className="mx-4 md:mx-8 py-12" id="contact">
+
+            <div className="max-w-7xl mx-auto rounded-4xl bg-gradient-to-br from-[#70A73C] via-[#6AA33A] to-[#4E842A] p-6 md:p-10">
+
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
 
                     {/* Left */}
-                    <div className="w-full lg:w-1/2">
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-tight">
-                            Where you can find me?
+                    <div className="w-full lg:w-[45%]">
+
+                        <span className="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm font-medium mb-5">
+                            CONTACT
+                        </span>
+
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                            Let's Connect.
                         </h2>
 
-                        <p className="mt-4 text-base sm:text-lg italic text-white">
-                            You can find me on the platforms below:
+                        <p className="mt-6 text-white/90 text-lg leading-relaxed max-w-lg">
+                            Interested in collaborating, discussing a project,
+                            or just saying hello? Feel free to reach out through
+                            any of the platforms below.
                         </p>
+
                     </div>
 
                     {/* Right */}
-                    <div className="w-full lg:w-[40%] bg-white rounded-2xl p-6 sm:p-8 flex flex-col gap-6">
+                    <div className="w-full lg:w-[42%]">
 
-                        <a
-                            href="mailto:pranata.dyo@gmail.com"
-                            className="flex items-center gap-4 group"
-                        >
-                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition">
-                                <span className="text-green-700 group-hover:text-white">
-                                    ✉
-                                </span>
+                        <div className="bg-white rounded-3xl shadow-2xl p-5 md:p-7 transition duration-300 hover:-translate-y-1">
+
+                            <div className="space-y-4">
+
+                                {contacts.map((contact) => (
+                                    <a
+                                        key={contact.title}
+                                        href={contact.href}
+                                        target={
+                                            contact.href.startsWith("http")
+                                                ? "_blank"
+                                                : undefined
+                                        }
+                                        rel="noopener noreferrer"
+                                        className="group flex items-center justify-between rounded-2xl border border-transparent p-4 transition-all duration-300 hover:bg-green-50 hover:border-green-100 hover:shadow-md"
+                                    >
+                                        <div className="flex items-center gap-4">
+
+                                            <div className="w-12 h-12 rounded-full bg-green-100 text-[#70A73C] flex items-center justify-center transition-all duration-300 group-hover:bg-[#70A73C] group-hover:text-white">
+                                                {contact.icon}
+                                            </div>
+
+                                            <div>
+
+                                                <p className="font-semibold text-gray-900">
+                                                    {contact.title}
+                                                </p>
+
+                                                <p className="text-sm text-gray-500 break-all">
+                                                    {contact.value}
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <FaArrowUpRightFromSquare
+                                            className="text-gray-400 transition-all duration-300 group-hover:text-[#70A73C] group-hover:-translate-y-1 group-hover:translate-x-1"
+                                        />
+                                    </a>
+                                ))}
+
                             </div>
 
-                            <p className="text-sm sm:text-base break-all text-gray-800 font-medium">
-                                pranata.dyo@gmail.com
-                            </p>
-                        </a>
-
-                        <a
-                            href="https://linkedin.com/in/pranataekapramudya"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-4 group"
-                        >
-                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition">
-                                <span className="text-green-700 group-hover:text-white">
-                                    in
-                                </span>
-                            </div>
-
-                            <p className="text-sm sm:text-base break-all text-gray-800 font-medium">
-                                linkedin.com/in/pranataekapramudya
-                            </p>
-                        </a>
-
-                        <a
-                            href="https://github.com/pramudyaeka"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-4 group"
-                        >
-                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition">
-                                <span className="text-green-700 group-hover:text-white">
-                                    gh
-                                </span>
-                            </div>
-
-                            <p className="text-sm sm:text-base break-all text-gray-800 font-medium">
-                                github.com/pramudyaeka
-                            </p>
-                        </a>
-
-                        <a
-                            href="https://instagram.com/pramudyaeka_"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-4 group"
-                        >
-                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition">
-                                <span className="text-green-700 group-hover:text-white">
-                                    ig
-                                </span>
-                            </div>
-
-                            <p className="text-sm sm:text-base break-all text-gray-800 font-medium">
-                                instagram.com/pramudyaeka_
-                            </p>
-                        </a>
+                        </div>
 
                     </div>
 
                 </div>
+
             </div>
 
-            <p className="text-center text-sm text-gray-500 mt-8">
-                © 2026 - Pramudya
-            </p>
+            {/* Footer */}
+            <div className="mt-10 text-center">
+
+                <p className="text-gray-500 text-sm">
+                    © 2026 Pranata Eka Pramudya. All rights reserved.
+                </p>
+
+            </div>
+
         </section>
     );
 }

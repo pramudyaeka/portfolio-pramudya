@@ -5,86 +5,186 @@ import {
     Palette,
     Code2,
     Search,
-} from 'lucide-react'
+} from "lucide-react";
 
 function AboutMe() {
     return (
-        <section id="about" className="relative bg-white py-16 md:py-24 overflow-hidden">
-            {/* Background gradient lingkaran - dekoratif */}
+        <section
+            id="about"
+            className="relative overflow-hidden bg-white py-20"
+        >
+            {/* Decorative Background */}
             <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
                     backgroundImage: `
-            radial-gradient(circle closest-side at 15% 50%, rgba(168,242,67,0.35) 0%, transparent 100%),
-            radial-gradient(circle closest-side at 85% 85%, rgba(168,242,67,0.35) 0%, transparent 100%)
-        `,
+                        radial-gradient(circle at 12% 20%, rgba(168,242,67,.22), transparent 32%),
+                        radial-gradient(circle at 88% 80%, rgba(168,242,67,.22), transparent 32%)
+                    `,
                 }}
             />
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                <h2 className="text-2xl sm:text-3xl font-helvetica text-center mb-8 md:mb-12">
-                    About Me
-                </h2>
+            <div className="relative max-w-7xl mx-auto px-6">
 
-                <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-8 md:gap-8">
+                {/* Heading */}
+                <div className="text-center mb-16">
 
-                    {/* Elevator Pitch - tampil duluan di mobile, tengah di desktop */}
-                    <p className="order-1 md:order-2 max-w-xs sm:max-w-sm text-center text-lg sm:text-xl leading-relaxed shrink-0">
-                        I'm <em>Pramudya</em>.{' '}
-                        <strong>Part designer, part developer,</strong> and
-                        fully obsessed with turning{' '}
-                        <strong>messy problems</strong> into{' '}
-                        <strong>interfaces that just make sense</strong>.
-                    </p>
+                    <span className="inline-block rounded-full bg-[#E8F7D3] px-5 py-2 text-sm font-semibold text-[#70A73C] tracking-wide">
+                        ABOUT ME
+                    </span>
 
-                    {/* Badge Identitas - kiri di desktop, tengah di mobile */}
-                    <div className="order-2 md:order-1 flex flex-row flex-wrap md:flex-col gap-3 md:gap-6 items-center md:items-end justify-center w-full md:w-56 shrink-0">
-                        <div className="bg-gray-100 text-gray-850 rounded-full px-2 py-2 text-xs sm:text-sm text-center rotate-2 hover:rotate-0 transition-transform flex flex-row gap-2 items-center justify-center shadow">
-                            <div className="w-10 h-10 md:w-12 md:h-12 bg-pink-700 rounded-full flex items-center justify-center shrink-0">
-                                <User size={16} className="text-white" />
+                    <h2 className="mt-5 text-4xl md:text-5xl font-bold">
+                        Nice to meet you 👋
+                    </h2>
+
+                </div>
+
+                <div className="grid lg:grid-cols-[1fr_1.4fr_1fr] gap-10 items-center">
+
+                    {/* LEFT STICKERS */}
+                    <div className="flex flex-wrap lg:flex-col justify-center lg:items-end gap-5">
+
+                        <div className="group bg-white rounded-full shadow-md px-3 py-3 flex items-center gap-3 rotate-2 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+                            <div className="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white">
+                                <User size={18} />
                             </div>
-                            <p className="pr-3">Pranata Eka Pramudya</p>
-                        </div>
-                        <div className="bg-gray-100 text-gray-850 rounded-full px-2 py-2 text-xs sm:text-sm text-center -rotate-1 hover:rotate-0 transition-transform flex flex-row gap-2 items-center justify-center shadow">
-                            <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center shrink-0">
-                                <GraduationCap size={16} className="text-white" />
+
+                            <div className="pr-4">
+                                <p className="text-xs text-gray-500">
+                                    Name
+                                </p>
+
+                                <p className="font-medium">
+                                    Pranata Eka Pramudya
+                                </p>
                             </div>
-                            <p className="pr-3">Universitas Mulawarman</p>
+
                         </div>
-                        <div className="bg-gray-100 text-gray-850 rounded-full px-2 py-2 text-xs sm:text-sm text-center rotate-1 hover:rotate-0 transition-transform flex flex-row gap-2 items-center justify-center shadow">
-                            <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-600 rounded-full flex items-center justify-center shrink-0">
-                                <MapPin size={16} className="text-white" />
+
+                        <div className="group bg-white rounded-full shadow-md px-3 py-3 flex items-center gap-3 -rotate-2 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+                            <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                                <GraduationCap size={18} />
                             </div>
-                            <p className="pr-3">Samarinda</p>
+
+                            <div className="pr-4">
+                                <p className="text-xs text-gray-500">
+                                    Education
+                                </p>
+
+                                <p className="font-medium">
+                                    Universitas Mulawarman
+                                </p>
+                            </div>
+
                         </div>
+
+                        <div className="group bg-white rounded-full shadow-md px-3 py-3 flex items-center gap-3 rotate-1 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+                            <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-white">
+                                <MapPin size={18} />
+                            </div>
+
+                            <div className="pr-4">
+                                <p className="text-xs text-gray-500">
+                                    Location
+                                </p>
+
+                                <p className="font-medium">
+                                    Samarinda
+                                </p>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    {/* Badge Skill - kanan di desktop, tengah di mobile */}
-                    <div className="order-3 flex flex-row flex-wrap md:flex-col gap-3 md:gap-6 items-center md:items-start justify-center w-full md:w-56 shrink-0">
-                        <div className="bg-gray-100 text-gray-850 rounded-full pl-2 pr-2 py-2 text-xs sm:text-sm text-center -rotate-2 hover:rotate-0 transition-transform flex flex-row gap-2 items-center justify-center shadow">
-                            <div className="w-10 h-10 md:w-12 md:h-12 bg-green-400 rounded-full flex items-center justify-center shrink-0">
-                                <Palette size={16} className="text-white" />
+                    {/* CENTER */}
+                    <div className="text-center">
+
+                        <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                            I'm <span className="text-[#70A73C]">Pramudya</span>.
+                        </h3>
+
+                        <p className="mt-8 text-xl md:text-2xl leading-relaxed text-gray-700 font-light">
+
+                            <span className="font-semibold">
+                                Part designer,
+                            </span>{" "}
+
+                            <span className="font-semibold">
+                                part developer,
+                            </span>{" "}
+
+                            and passionate about crafting digital experiences that
+                            transform messy problems into intuitive and meaningful
+                            solutions.
+
+                        </p>
+
+                        <div className="mt-10 flex justify-center">
+
+                            <div className="rounded-full bg-[#70A73C] px-6 py-3 text-white shadow-lg">
+                                💡 Always learning something new.
                             </div>
-                            <p className="pr-1">UI/UX Design</p>
+
                         </div>
-                        <div className="bg-gray-100 text-gray-850 rounded-full pl-2 pr-2 py-2 text-xs sm:text-sm text-center rotate-1 hover:rotate-0 transition-transform flex flex-row gap-2 items-center justify-center shadow">
-                            <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-400 rounded-full flex items-center justify-center shrink-0">
-                                <Code2 size={16} className="text-white" />
+
+                    </div>
+
+                    {/* RIGHT STICKERS */}
+                    <div className="flex flex-wrap lg:flex-col justify-center lg:items-start gap-5">
+
+                        <div className="group bg-[#FFF5F7] rounded-full shadow-md px-3 py-3 flex items-center gap-3 -rotate-2 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+                            <div className="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white">
+                                <Palette size={18} />
                             </div>
-                            <p className="pr-1">Web Developer</p>
-                        </div>
-                        <div className="bg-gray-100 text-gray-850 rounded-full pl-2 pr-2 py-2 text-xs sm:text-sm text-center -rotate-1 hover:rotate-0 transition-transform flex flex-row gap-2 items-center justify-center shadow">
-                            <div className="w-10 h-10 md:w-12 md:h-12 bg-amber-400 rounded-full flex items-center justify-center shrink-0">
-                                <Search size={16} className="text-white" />
+
+                            <div className="pr-4">
+                                <p className="font-medium">
+                                    UI / UX Design
+                                </p>
                             </div>
-                            <p className="pr-1">Detail-Oriented</p>
+
                         </div>
+
+                        <div className="group bg-[#F1F9EA] rounded-full shadow-md px-3 py-3 flex items-center gap-3 rotate-2 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+                            <div className="w-12 h-12 rounded-full bg-[#70A73C] flex items-center justify-center text-white">
+                                <Code2 size={18} />
+                            </div>
+
+                            <div className="pr-4">
+                                <p className="font-medium">
+                                    Web Development
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div className="group bg-[#FFFBEA] rounded-full shadow-md px-3 py-3 flex items-center gap-3 -rotate-1 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+
+                            <div className="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center text-white">
+                                <Search size={18} />
+                            </div>
+
+                            <div className="pr-4">
+                                <p className="font-medium">
+                                    Detail-Oriented
+                                </p>
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
+
             </div>
         </section>
-    )
+    );
 }
 
-export default AboutMe
+export default AboutMe;
